@@ -27,8 +27,8 @@ class DbHelper {
 
   Future<Database> _initDatabase() async{
     // pegar o local onde esta salvo o BD (path)
-    final _dbPath = await getDatabasesPath();
-    final path = join(_dbPath,"petshop.db"); //caminho para o banco de dados
+    final dbPath = await getDatabasesPath();
+    final path = join(dbPath,"petshop.db"); //caminho para o banco de dados
 
     return await openDatabase(path); // cenas para o próximo capítulo
 
