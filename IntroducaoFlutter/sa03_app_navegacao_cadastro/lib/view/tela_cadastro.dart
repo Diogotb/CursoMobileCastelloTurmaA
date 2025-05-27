@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
-class TelaCadastro extends StatefulWidget{ // chamar as mudanças de estado
+class TelaCadastro extends StatefulWidget{
+  const TelaCadastro({super.key});
+ // chamar as mudanças de estado
+  @override
   _TelaCadastroState createState() => _TelaCadastroState();
 }
 

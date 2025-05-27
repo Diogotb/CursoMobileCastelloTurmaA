@@ -10,6 +10,8 @@ void main(){
 
 //Janela para estudo de Layout (Colums,Rows,Stacks,Containers)
 class MyApp extends StatelessWidget{
+  const MyApp({super.key});
+
   //Sobrescrever o método build
   @override
   Widget build(BuildContext context){

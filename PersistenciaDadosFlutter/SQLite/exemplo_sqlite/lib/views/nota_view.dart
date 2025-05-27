@@ -5,6 +5,8 @@ import 'package:exemplo_sqlite/models/nota_model.dart';
 import 'package:flutter/material.dart';
 
 class NotaView extends StatefulWidget {
+  const NotaView({super.key});
+
   //chama as mudanças
   @override
   State<StatefulWidget> createState() {

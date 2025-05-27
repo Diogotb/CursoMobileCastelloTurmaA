@@ -13,14 +13,16 @@ void main(){ //onde roda minha aplicação
 // minha classe para o perfil page
 
 class PerfilPage extends StatefulWidget{
+  const PerfilPage({super.key});
+
   @override
   State<PerfilPage> createState()=> _PefilPageState(); //chama as modificações da tela
 }
 
 class _PefilPageState extends State<PerfilPage>{
   //atributos
-  TextEditingController _nomeController = TextEditingController();
-  TextEditingController _idadeController = TextEditingController();
+  final TextEditingController _nomeController = TextEditingController();
+  final TextEditingController _idadeController = TextEditingController();
   String? _corSelecionada;
   Color _corFundo = Colors.white;
 

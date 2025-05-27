@@ -7,6 +7,8 @@ void main(){
 //classe FormularioApp()
 
 class FormularioApp extends StatefulWidget{
+  const FormularioApp({super.key});
+
   //linha para chamar o construtor sempre que tiver uma alteração de estado (setState) 
   @override
   _FormularioAppState createState() => _FormularioAppState();

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class TelaTodoList extends StatefulWidget{
+  const TelaTodoList({super.key});
+
   @override
   _TelaTodoListState createState() => _TelaTodoListState();
 }
@@ -11,7 +13,7 @@ class _TelaTodoListState extends State<TelaTodoList>{
   String _nome = "";
   bool _darkMode = false;
   List<String> _tarefas = [];
-  TextEditingController _tarefasController = TextEditingController();
+  final TextEditingController _tarefasController = TextEditingController();
   //Controlador para novas tarefas
   //lista_diferente_para_cada_usuario
   String _chaveLista = "";
@@ -24,24 +26,24 @@ class _TelaTodoListState extends State<TelaTodoList>{
   }
 
   void _carregarPreferencias() async{
-    SharedPreferences _prefs = await SharedPreferences.getInstance(); //estabelece conexão memoria
-    _nome = _prefs.getString("nome") ?? ""; // pega as informações do nome
-    _darkMode = _prefs.getBool("darkMode") ?? false; // pega informaç~eos do darkMode
-    _chaveLista = "lista${_nome}"; // constroe a chave da lista
-    _tarefas = _prefs.getStringList(_chaveLista) ?? []; // pega as informações da lista referente ao usuário específico
+    SharedPreferences prefs = await SharedPreferences.getInstance(); //estabelece conexão memoria
+    _nome = prefs.getString("nome") ?? ""; // pega as informações do nome
+    _darkMode = prefs.getBool("darkMode") ?? false; // pega informaç~eos do darkMode
+    _chaveLista = "lista$_nome"; // constroe a chave da lista
+    _tarefas = prefs.getStringList(_chaveLista) ?? []; // pega as informações da lista referente ao usuário específico
     setState(() {
       
     });
   }
 
   void _salvarTarefas() async{
-    SharedPreferences _prefs = await SharedPreferences.getInstance();
+    SharedPreferences prefs = await SharedPreferences.getInstance();
     if(_tarefasController.text.trim().isEmpty){
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("A Tarefa Está Vazia")));
     }else{
       _tarefas.add(_tarefasController.text.trim());
-      _chaveLista = "lista${_nome}";
-      _prefs.setStringList(_chaveLista, _tarefas);
+      _chaveLista = "lista$_nome";
+      prefs.setStringList(_chaveLista, _tarefas);
       setState(() {
         _tarefasController.clear();
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Tarefa Adicionada Com Sucesso")));
@@ -51,10 +53,10 @@ class _TelaTodoListState extends State<TelaTodoList>{
   }
 
   _removerTarefa(int index) async{
-    SharedPreferences _prefs = await SharedPreferences.getInstance();
+    SharedPreferences prefs = await SharedPreferences.getInstance();
     _tarefas.removeAt(index); //remove a tarefa da lista
-    _chaveLista = "lista${_nome}";
-    _prefs.setStringList(_chaveLista, _tarefas); //atualiza a lista na memoria
+    _chaveLista = "lista$_nome";
+    prefs.setStringList(_chaveLista, _tarefas); //atualiza a lista na memoria
     setState(() {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Tarefa Removida Com Sucesso")));
     });
@@ -64,7 +66,7 @@ class _TelaTodoListState extends State<TelaTodoList>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Lista de Tarefas de ${_nome}"),),
+      appBar: AppBar(title: Text("Lista de Tarefas de $_nome"),),
       body: Padding(
         padding: EdgeInsets.all(16),
         child: ListView.builder(

@@ -8,7 +8,9 @@ void main(){
 //criar a classe principal
 // construir duas classes 
 //1 classe chamar mudanças de estado
-class ToDoListApp extends StatefulWidget{ 
+class ToDoListApp extends StatefulWidget{
+  const ToDoListApp({super.key});
+ 
   @override
   _ToDoListAppState createState() => _ToDoListAppState();
 } 
@@ -17,7 +19,7 @@ class ToDoListApp extends StatefulWidget{
 class _ToDoListAppState extends State<ToDoListApp>{
   //atributos
   final TextEditingController _tarefaController = TextEditingController(); //obj para pegar o valor do texto
-  List<Map<String,dynamic>> _tarefa = [];
+  final List<Map<String,dynamic>> _tarefa = [];
 
   //build
   @override
@@ -56,9 +58,9 @@ class _ToDoListAppState extends State<ToDoListApp>{
               ),
             ),
             ElevatedButton(
-              onPressed: _removerConcluidas, 
-              child: Text("Remover Concluídas"),
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.red))
+              onPressed: _removerConcluidas,
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.red), 
+              child: Text("Remover Concluídas"))
           ],
         ),
       ),
