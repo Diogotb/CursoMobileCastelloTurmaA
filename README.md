@@ -1,4 +1,4 @@
-## Curso Mobile
+# Curso Mobile
 - Introdução ao POO (Programação Orientada ao Objeto)
     - Introdução a Linguagem Java
     - Configuração do Ambiente de Desenvolvimento
@@ -32,3 +32,11 @@
             - Ionic
                 - Linguagem: JavaScript
                 - Não Gera APK nativos(RunTime)   
+
+## Preparação da Máquina para Flutter
+- Instalar o Java 
+    - Terminar: Java --version -> jdk-21java
+- Prepara o Ambiente Android ( platforms - emulator - commandLine)
+    - Terminal: sdkmanager --list , adb --version, emulator --version 
+- Preparar o Flutter ( src/flutter) 3.32.8
+    - Terminar: flutter --version
