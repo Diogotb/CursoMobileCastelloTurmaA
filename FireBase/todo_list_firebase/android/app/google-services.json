@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "849159664195",
+    "project_id": "todo-list-castelloa",
+    "storage_bucket": "todo-list-castelloa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:849159664195:android:c40d1c27da9742f03a5af6",
+        "android_client_info": {
+          "package_name": "com.example.todo_list_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4OoUfLxti99M7V_7kOumc4CoucXil1gE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
