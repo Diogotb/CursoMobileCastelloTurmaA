@@ -12,8 +12,8 @@ class LoginView extends StatefulWidget {
 class _LoginViewState extends State<LoginView> {
   //atributos
   final FirebaseAuth _auth = FirebaseAuth.instance; //controller para autenticar usuários na plataforma do FireBase
-  final _emailField = TextEditingController();
-  final _senhaField = TextEditingController();
+  final _emailField = TextEditingController(); //controlador do campo de texto
+  final _senhaField = TextEditingController(); //controlador do campo de texto
   bool _senhaOculta = true;
 
   //método de login
