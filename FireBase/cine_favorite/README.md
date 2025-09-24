@@ -1,7 +1,9 @@
 # CineFavorite - Formativa
+
 Construindo um aplicativo do Zero - O CineFavorite permitirá criar uma conta e buscar filmes em uma api e montar uma galeria pessoal de filmes favoritos, com capas e notas.
 
 ## Objetivos
+
 - Integrar o Aplicativo a uam API
 - Criar uma conta pessoal no FireBase
 - Armazenar informações para Cada usuários das preferencias solicitadas
@@ -16,26 +18,28 @@ Construindo um aplicativo do Zero - O CineFavorite permitirá criar uma conta e 
 ## Diagramas
 
 1. ### Diagrama de Classe
-    Diagrama de que demonstra as entidades da aplicação
 
-    - usuário (user) : classe criada pelo FireBase
-        - email
-        - senha
-        - id
-        - create()
-        - login()
-        - logout()
+   Diagrama de que demonstra as entidades da aplicação
 
-    - Filme (Movie) : Classe modelada pelo dev
-        - number id:
-        - String titulo:
-        - String PosterPath
-        - boolean favorito
-        - double Nota
-        - adicionar()
-        - update()
-        - remover()
-        - listarFavoritos()
+   - usuário (user) : classe criada pelo FireBase
+
+     - email
+     - senha
+     - id
+     - create()
+     - login()
+     - logout()
+
+   - Filme (Movie) : Classe modelada pelo dev
+     - number id:
+     - String titulo:
+     - String PosterPath
+     - boolean favorito
+     - double Nota
+     - adicionar()
+     - update()
+     - remover()
+     - listarFavoritos()
 
 ```mermaid
 
@@ -59,12 +63,18 @@ classDiagram
         +removeFavorite()
         +updateRating()
         +read()
-    } 
+    }
 
     User "1"--"1+" Movie : "selecionar"
 
 ```
 
+2. ### Diagrama de Uso
+
+3. ### Diagrama de Fluxo
+
 ## Prototipagem
+
+- Colocar o Link do Figma
 
 ## Codificação

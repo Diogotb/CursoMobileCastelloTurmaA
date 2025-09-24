@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1081597736059",
+    "project_id": "cine-favorite-castelloa",
+    "storage_bucket": "cine-favorite-castelloa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081597736059:android:b8b0df8321daff174b9ede",
+        "android_client_info": {
+          "package_name": "com.example.cine_favorite"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCN4YSHKJg4CG6EdiFzZjNxpC0scwVQNEU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
